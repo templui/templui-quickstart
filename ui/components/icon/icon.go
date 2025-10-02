@@ -1,4 +1,4 @@
-// templui component icon - version: v0.97.0 installed by templui v0.97.0
+// templui component icon - version: v0.98.0 installed by templui v0.98.0
 package icon
 
 import (

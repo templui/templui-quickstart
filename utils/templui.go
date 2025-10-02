@@ -1,8 +1,9 @@
-// templui util templui.go - version: v0.97.0 installed by templui v0.97.0
+// templui util templui.go - version: v0.98.0 installed by templui v0.98.0
 package utils
 
 import (
 	"fmt"
+	"time"
 
 	"crypto/rand"
 
@@ -53,3 +54,7 @@ func MergeAttributes(attrs ...templ.Attributes) templ.Attributes {
 func RandomID() string {
 	return fmt.Sprintf("id-%s", rand.Text())
 }
+
+// ScriptVersion is a timestamp generated at app start for cache busting.
+// Used in Script() templates to append ?v=<timestamp> to script URLs.
+var ScriptVersion = fmt.Sprintf("%d", time.Now().Unix())
