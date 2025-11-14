@@ -12,7 +12,7 @@ require github.com/Oudwins/tailwind-merge-go v0.2.0
 require (
 	dario.cat/mergo v1.0.2 // indirect
 	github.com/a-h/parse v0.0.0-20250122154542-74294addb73e // indirect
-	github.com/air-verse/air v1.63.0 // indirect
+	github.com/air-verse/air v1.62.0 // indirect
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/bep/godartsass/v2 v2.5.0 // indirect
 	github.com/bep/golibsass v1.2.0 // indirect
