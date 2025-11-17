@@ -1,7 +1,8 @@
 package pages
 
 import (
-	"github.com/templui/templui-quickstart/ui/components/button"
+	// "github.com/templui/templui-quickstart/ui/components/button"
+	"github.com/templui/templui/components/button"
 	"github.com/templui/templui-quickstart/ui/layouts"
 )
 
@@ -19,16 +20,14 @@ templ Landing() {
 				</div>
 				<div class="flex gap-3">
 					@button.Button(button.Props{
-						Variant: "default",
-						Href:    "https://templui.io/docs/how-to-use",
-						Target:  "_blank",
+						Href:   "https://templui.io/docs/how-to-use",
+						Target: "_blank",
 					}) {
 						Documentation
 					}
 					@button.Button(button.Props{
-						Variant: "outline",
-						Href:    "https://github.com/templui/templui",
-						Target:  "_blank",
+						Href:   "https://github.com/templui/templui",
+						Target: "_blank",
 					}) {
 						GitHub
 					}

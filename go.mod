@@ -7,11 +7,14 @@ require (
 	github.com/joho/godotenv v1.5.1
 )
 
-require github.com/Oudwins/tailwind-merge-go v0.2.0
+require (
+	github.com/Oudwins/tailwind-merge-go v0.2.0
+	github.com/templui/templui v0.100.1-0.20251117043804-64f999549237
+)
 
 require (
 	github.com/a-h/parse v0.0.0-20250122154542-74294addb73e // indirect
-	github.com/andybalholm/brotli v1.1.0 // indirect
+	github.com/andybalholm/brotli v1.1.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cli/browser v1.3.0 // indirect
 	github.com/fatih/color v1.18.0 // indirect
