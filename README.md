@@ -1,3 +1,11 @@
+# ⚠️ DEPRECATED
+
+This repository is deprecated. Use the templUI CLI instead:
+
+See https://templui.io for more information.
+
+---
+
 # templUI Quickstart
 
 Get started with templUI components for Go + templ.
@@ -45,4 +53,3 @@ Visit [templui.io/docs](https://templui.io/docs) for component documentation.
 ## License
 
 MIT
-
