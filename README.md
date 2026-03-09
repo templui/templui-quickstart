@@ -17,3 +17,10 @@ If you want your own module path later, run:
 ```sh
 go mod edit -module your/module/path
 ```
+
+## Docker
+
+```sh
+docker build -t myapp .
+docker run -p 8090:8090 myapp
+```
