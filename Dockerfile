@@ -11,7 +11,7 @@ RUN arch="$(apk --print-arch)" && \
       aarch64) tailwind_arch="arm64" ;; \
       *) echo "unsupported architecture: $arch" && exit 1 ;; \
     esac && \
-    wget -O /usr/local/bin/tailwindcss "https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-${tailwind_arch}" && \
+    wget -L -O /usr/local/bin/tailwindcss "https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-${tailwind_arch}-musl" && \
     chmod +x /usr/local/bin/tailwindcss
 
 RUN TEMPLUI_PATH="$(go list -m -f '{{.Dir}}' github.com/templui/templui)" && \
