@@ -5,6 +5,8 @@ This is a ready-to-run quickstart project for templUI.
 ## Run
 
 ```sh
+git clone <repo-url>
+cd templui-quickstart
 cp .env.example .env
 go mod tidy
 task dev
@@ -21,6 +23,8 @@ go mod edit -module your/module/path
 ## Docker
 
 ```sh
-docker build -t myapp .
-docker run -p 8090:8090 myapp
+docker build -t templui-quickstart .
+docker run --rm -p 8088:8090 templui-quickstart
 ```
+
+Then open `http://localhost:8088`.
