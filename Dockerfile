@@ -31,7 +31,9 @@ RUN TEMPLUI_PATH="$(go list -m -f '{{.Dir}}' github.com/templui/templui)" && \
     test -d "$TEMPLUI_PATH/components" && \
     printf '%s\n' \
       '@source "./**/*.templ";' \
+      '@source "./**/*.js";' \
       "@source \"$TEMPLUI_PATH/components/**/*.templ\";" \
+      "@source \"$TEMPLUI_PATH/components/**/*.js\";" \
       > ./assets/css/sources.generated.css && \
     tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify
 
