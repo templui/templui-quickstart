@@ -5,8 +5,9 @@ This is a ready-to-run quickstart project for templUI.
 ## Run
 
 ```sh
-git clone <repo-url>
-cd templui-quickstart
+git clone https://github.com/templui/templui-quickstart.git myapp
+rm -rf myapp/.git
+cd myapp
 cp .env.example .env
 go mod tidy
 task dev
