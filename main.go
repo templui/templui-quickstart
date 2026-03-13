@@ -10,6 +10,7 @@ import (
 
 	"github.com/a-h/templ"
 	"github.com/joho/godotenv"
+	"github.com/templui/templui/utils"
 )
 
 func main() {
@@ -36,9 +37,12 @@ func initDotEnv() {
 func setupAssetsRoutes(mux *http.ServeMux) {
 	isDevelopment := os.Getenv("GO_ENV") != "production"
 
+	// Your app assets (CSS, fonts, images, ...)
 	assetHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if isDevelopment {
 			w.Header().Set("Cache-Control", "no-store")
+		} else {
+			w.Header().Set("Cache-Control", "public, max-age=31536000")
 		}
 
 		var fs http.Handler
@@ -52,4 +56,7 @@ func setupAssetsRoutes(mux *http.ServeMux) {
 	})
 
 	mux.Handle("GET /assets/", http.StripPrefix("/assets/", assetHandler))
+
+	// templUI embedded component scripts
+	utils.SetupScriptRoutes(mux, isDevelopment)
 }

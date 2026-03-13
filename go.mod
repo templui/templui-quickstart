@@ -7,7 +7,7 @@ tool github.com/a-h/templ/cmd/templ
 require (
 	github.com/a-h/templ v0.3.1001
 	github.com/joho/godotenv v1.5.1
-	github.com/templui/templui v1.7.1
+	github.com/templui/templui v1.8.0
 )
 
 require (
