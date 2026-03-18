@@ -21,6 +21,13 @@ If you want your own module path later, run:
 go mod edit -module your/module/path
 ```
 
+## Need more?
+
+If you outgrow the starter, check out these next steps:
+
+- [templUI Pro](https://pro.templui.io/) for premium UI blocks and faster page assembly
+- [goilerplate](https://goilerplate.com/) for a production-ready Go SaaS foundation
+
 ## Docker
 
 ```sh
