@@ -2,7 +2,7 @@ version: "3"
 
 vars:
   TAILWIND_CMD:
-    sh: command -v tailwindcss >/dev/null 2>&1 && echo "tailwindcss" || echo "npx tailwindcss@latest"
+    sh: command -v tailwindcss >/dev/null 2>&1 && echo "tailwindcss" || { [ -d node_modules/tailwindcss ] || npm install --save-dev tailwindcss >/dev/null 2>&1; echo "npx @tailwindcss/cli"; }
 
 tasks:
   templ:
