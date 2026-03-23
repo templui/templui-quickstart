@@ -26,7 +26,7 @@ RUN arch="$(dpkg --print-architecture)" && \
 
 # Build the Tailwind CSS file.
 # We also include templUI component templates, so Tailwind sees their classes too.
-RUN TEMPLUI_PATH="$(go list -m -f '{{.Dir}}' github.com/templui/templui)" && \
+RUN TEMPLUI_PATH="$(go list -mod=mod -m -f '{{.Dir}}' github.com/templui/templui)" && \
     test -n "$TEMPLUI_PATH" && \
     test -d "$TEMPLUI_PATH/components" && \
     printf '%s\n' \
