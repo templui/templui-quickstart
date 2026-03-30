@@ -1,9 +1,5 @@
 version: "3"
 
-vars:
-  TAILWIND_CMD:
-    sh: command -v tailwindcss >/dev/null 2>&1 && echo "tailwindcss" || echo "npx tailwindcss@latest"
-
 tasks:
   templ:
     desc: Run templ with integrated server and hot reload
@@ -21,7 +17,7 @@ tasks:
           "@source \"$TEMPLUI_PATH/components/**/*.templ\";" \
           "@source \"$TEMPLUI_PATH/components/**/*.js\";" \
           > ./assets/css/sources.generated.css && \
-        {{.TAILWIND_CMD}} -i ./assets/css/input.css -o ./assets/css/output.css --watch
+        tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch
 
   dev:
     desc: Start development server with hot reload
